@@ -145,7 +145,7 @@ class NQ():
 test_board = NQ()
 test_board.random_fill()
 test_board.test_conflicts()
-test_board.solve()
+# test_board.solve()
 print("BOARD:")
 print(test_board.board.reshape(N,N))
 print("CONFLICTS:")
