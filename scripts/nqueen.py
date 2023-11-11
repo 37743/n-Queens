@@ -12,14 +12,14 @@
      (denoted by 1) on the coordinates or not. (denoted by 0)
      '''
 
-# Where N is the number of queens placed on each row.
-N = 4
 
 # Libraries
 import numpy as np
-import sys
-sys.path.append("scripts/") 
 import nqueen_backtracking as nqb
+import config.settings as st
+
+# Where N is the number of queens placed on each row.
+N = st.N
 
 # Create a template empty board filled with zeroes
 empty_board = np.zeros((N,N), dtype = int).flatten()
