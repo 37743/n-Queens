@@ -121,15 +121,13 @@ class NQ():
                 if self.conflicts_2d[idx][idy] > max_constraint:
                     max_constraint = self.conflicts_2d[idx][idy]
                     mc_idx, mc_idy = idx, idy
-
         if max_constraint == 0:
             return NQ(self.board_2d.flatten(), self.conflicts_2d.flatten())
-
+        
         self.board_2d[mc_idx][mc_idy] = 0
         if (mc_idx < N-1):
             mc_idx += 1
         self.board_2d[mc_idx][mc_idy] = 1
-        print(self.board_2d)
         self.test_conflicts()
 
         if depth < N:
@@ -147,7 +145,7 @@ class NQ():
 test_board = NQ()
 test_board.random_fill()
 test_board.test_conflicts()
-# test_board.solve()
+test_board.solve()
 print("BOARD:")
 print(test_board.board.reshape(N,N))
 print("CONFLICTS:")
