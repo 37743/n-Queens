@@ -8,7 +8,7 @@ kivy.require('2.2.0')
 from kivy import App
 from config import settings
 from kivy.uix.screenmanager import ScreenManager, WipeTransition
-import scripts.screens.nqueen as nqueen
+import scripts.nqueen as nqueen
 class App(App):
     def build(self):
         self.title = settings.VersionInfo.get_title()
