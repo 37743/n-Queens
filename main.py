@@ -6,7 +6,7 @@
 import kivy
 kivy.require('2.2.0')
 from kivy import App
-from config import settings
+from scripts.config import settings
 from kivy.uix.screenmanager import ScreenManager, WipeTransition
 import scripts.nqueen as nqueen
 class App(App):
