@@ -13,7 +13,7 @@
      '''
 
 # Where N is the number of queens placed on each row.
-N = 8
+N = 4
 
 # Libraries
 import numpy as np
@@ -30,7 +30,7 @@ class NQ():
             self.board = new_board
         # Transform from 1 dimensional to 2 dimensional board.
         self.board_2d = self.board.reshape((N,N))
-        print(self.board_2d)
+        # print(self.board_2d)
 
     def __str__(self):
         ''' Prints the board to the console in 2D'''

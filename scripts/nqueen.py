@@ -17,6 +17,9 @@ N = 4
 
 # Libraries
 import numpy as np
+import sys
+sys.path.append("scripts/") 
+import nqueen_backtracking as nqb
 
 # Create a template empty board filled with zeroes
 empty_board = np.zeros((N,N), dtype = int).flatten()
@@ -138,8 +141,11 @@ class NQ():
 
     def solve(self):
         self.test_conflicts()
+        self.board1d = nqb.NQ()
         self.solve_board()
-        return
+        self.board1d.fill(0)
+        self.board = self.board1d.board
+        self.conflicts = empty_board
 
 # Formulate the board
 test_board = NQ()
