@@ -89,6 +89,14 @@ class NQ():
         self.check_cols(self.board_2d)
         self.check_diags(self.board_2d)
     
+    def solve(self):
+        self.test_conflicts()
+        self.board1d = nqb.NQ()
+        self.solve_board()
+        self.board1d.fill(0)
+        self.board = self.board1d.board
+        self.conflicts = empty_board
+        
     def check_cols(self, board):
         ''' Check cols for a winning combination'''
         for j in range(N): # Column loop
@@ -139,13 +147,6 @@ class NQ():
         self.board = self.board_2d.flatten()
         return NQ(self.board_2d.flatten(), self.conflicts_2d.flatten())
 
-    def solve(self):
-        self.test_conflicts()
-        self.board1d = nqb.NQ()
-        self.solve_board()
-        self.board1d.fill(0)
-        self.board = self.board1d.board
-        self.conflicts = empty_board
 
 # Formulate the board
 test_board = NQ()
